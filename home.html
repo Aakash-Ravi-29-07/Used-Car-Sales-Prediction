@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href = "./static/css/home.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="home.js"></script>
+</head>
+<body>
+    <div class = "top_container">
+        <p class = "heading1">Car Price Predictor</p>
+        <p class = "heading2">(For Used Cars Only)</p>
+    </div>
+
+    <div class = "form_container">
+      <form class="details" action="index.html" method="post">
+        <select class="companies" name="get_compqanies" id = "companies_select">
+          <option value="Select a company" disabled = disabled selected = selected>Select a Company</option>
+        </select>
+        <br>
+        <select class="year" name="get_year" id = "year_select">
+          <option value="Select an year" disabled = disabled selected = selected>Select an year</option>
+        </select>
+        <br>
+        <p class = "engine_text">Enter the Engine(CC) value</p>
+        <input type="text" name="engine_cc" value="" id = "engine_select">
+        <br>
+        <select class="seats" name="get_seats" id = "seats_select">
+          <option value="" disabled = disabled selected = selected>Select the no. of seats</option>
+        </select>
+        <br>
+        <button type = "button" onclick="predictPrice()">Predict Price</button>
+        <br>
+      </form>
+    </div>
+    <br>
+    <h2 class = "price" id = "display_price">Estimated Price</h2>
+</body>
+</html>
